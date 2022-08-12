@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box ;
+        
+        }
+        .wrap{
+           
+            background-color: beige;
+            width: 100%;
+            height: 100vh;
+           
+
+        }
+        .card{
+            box-shadow: 0 3px 5px #999;
+           
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            background: white;
+            width: 300px;
+            height: 430px;
+       
+            margin: 10px;
+            border-radius: 15px;
+        }
+        .card__img{
+            padding: 10px;
+            display: flex;
+            justify-content: right;
+            align-items: flex-end;
+            background-image: url(4.jfif);
+         
+            
+            
+        background-color: white;
+        height: 170px;
+        margin-bottom: 15px;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+        
+
+        }
+        textarea{               
+        
+        position: relative;
+        top: -15px;
+        left:0;
+        background-color: white;
+        border-radius:  0 0 10px 10px;
+        padding: 10px;
+        font-size: 20px;
+        resize: none;
+        border: none;    
+
+          
+        
+          width: 300px;
+          height: 260px;
+          border: none;
+        
+        }
+        textarea:hover{        
+            background-color: lightgrey;
+            border: none;
+
+        
+        
+
+          
+        
+          width: 300px;
+          height: 260px;
+          border: none;
+        
+        }
+        .pen__block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            width: 55px;
+            border-radius: 10px;
+            height: 50px;
+            background-color: white;
+            opacity: 0.6;
+          
+        }
+        .popup{
+            display: none;
+            box-shadow: 0 3px 5px #999;
+    
+            position: absolute;
+            left: 65%;
+            top: 10%;
+            width: 500px;
+            height: 430px;
+            background-color:  white;
+            border-radius: 10px;
+        }
+
+        .ros{
+            box-shadow: 0 3px 5px #999;
+            position: relative;
+            top: 10px;
+            left: 20px;
+            
+            width: 190px;
+            height: 80px;
+            background-color: white;
+            background-image: url(1.jfif);
+        }
+        .ros1{
+            box-shadow: 0 3px 5px #999;
+            padding: 20px;
+            position: relative;
+            top: 30px;
+            left: 20px;
+            
+            width: 190px;
+            height: 80px;
+            background-color: white;
+            background-image: url(2.jpg);
+        }
+        .ros2{
+            box-shadow: 0 3px 5px #999;
+            padding: 20px;
+            position: relative;
+            top: 50px;
+            left: 20px;
+            
+            width: 190px;
+            height: 80px;
+            background-color:  white;
+            background-image: url(3.jfif);
+        }
+        .ros3{
+            box-shadow: 0 3px 5px #999;
+            padding: 20px;
+            position: relative;
+            top: 70px;
+            left: 20px;
+            
+            width: 190px;
+            height: 80px;
+            background-color: white;
+            background-image: url(4.jfif);
+        }
+
+
+        .ros4{
+            box-shadow: 0 3px 5px #999;
+            padding: 20px;
+            position: absolute;
+            top: 10px;
+            left: 280px;
+            
+            width: 190px;
+            height: 80px;
+            background-color:  white;
+            background-image: url(3.jpg);
+        }
+        .ros5{
+            box-shadow: 0 3px 5px #999;
+            padding: 0;
+            position: absolute;
+            top: 110px;
+            left: 280px;
+            
+            width: 190px;
+            height: 80px;
+            background-color:  white;
+            background-image: url(5.jfif);
+        }
+        .ros6{
+            box-shadow: 0 3px 5px #999;
+            padding: 0;
+            position: absolute;
+            top: 210px;
+            left: 280px;
+            
+            width: 190px;
+            height: 80px;
+            background-color:  white;
+            background-image: url(6.jfif);
+        }
+        .ros7{
+            box-shadow: 0 3px 5px #999;
+            padding: 0;
+            position: absolute;
+            top: 310px;
+            left: 280px;
+            
+            width: 190px;
+            height: 80px;
+            background-color: white;
+            background-image: url(4.jpg);
+        }
+        .btn{
+            box-shadow: 0 3px 5px #999;
+            width: 100px;
+            height: 30px;
+            background-color:  white;
+            border: none;
+            border-radius: 10px;
+            position: absolute;
+            left: 47%;
+            top: 80%;
+
+        }
+
+
+       
+
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="card">
+                <div class="card__img" id="cardImg">
+                    <div class="pen__block" id="pen">
+                         <img src="pen.png" alt="" >
+                    </div>
+                    
+
+                </div>
+                <div class="card__text">
+                    <textarea name=""  cols="30" rows="10" id="inp"></textarea>
+        
+                </div>
+               
+            </div>
+            <button class="btn" id="btn">Clear</button>
+            <div class="popup" id="popup">
+                <div class="one">
+                    <div class="ros" id="ros"></div>
+                    <div class="ros1" id="ros1"></div>
+                    <div class="ros2" id="ros2"></div>
+                    <div class="ros3" id="ros3"></div>
+                 
+                   
+                   
+                  
+                </div>
+                <div class="two">
+                    <div class="ros4" id="ros4"></div>
+                    <div class="ros5" id="ros5"></div>
+                    <div class="ros6" id="ros6"></div>
+                    <div class="ros7" id="ros7"></div>
+
+                </div>
+              
+
+            </div>
+       
+            
+            
+            
+
+        </div>
+        
+        
+    </div>
+    <script>
+        pen.onclick = function(){
+            popup.style.display = 'flex'
+        }
+        ros.onclick = function(){
+            cardImg.style.backgroundImage = "url('1.jfif')"
+            popup.style.display = 'none'
+
+
+        }
+        ros1.onclick = function(){
+            cardImg.style.backgroundImage = "url('2.jpg')"
+            popup.style.display = 'none'
+
+        }
+        ros2.onclick = function(){
+            cardImg.style.backgroundImage = "url('3.jfif')"
+            popup.style.display = 'none'
+
+        }
+        ros3.onclick = function(){
+            cardImg.style.backgroundImage = "url('4.jfif')"
+            popup.style.display = 'none'
+
+        }
+        ros4.onclick = function(){
+            cardImg.style.backgroundImage = "url('3.jpg')"
+            popup.style.display = 'none'
+
+        }
+        ros5.onclick = function(){
+            cardImg.style.backgroundImage = "url('5.jfif')"
+            popup.style.display = 'none'
+
+        }
+        ros6.onclick = function(){
+            cardImg.style.backgroundImage = "url('6.jfif')"
+            popup.style.display = 'none'
+
+        }
+        ros7.onclick = function(){
+            cardImg.style.backgroundImage = "url('4.jpg')"
+            popup.style.display = 'none'
+
+        }
+
+
+        btn.onclick = function(){
+            inp.value = '';
+        }
+
+
+  
+
+    </script>
+    
+</body>
+</html>
